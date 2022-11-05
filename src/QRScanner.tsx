@@ -30,6 +30,7 @@ const QRScanner = (props: any) => {
     return (
         <>
             <div className={styles.container}>
+                <p id="result" className={styles.result}>{data}</p>
                 <div className={styles.scanner}>
                     <QrReader
                         constraints={{ facingMode: "environment" }}
@@ -38,8 +39,6 @@ const QRScanner = (props: any) => {
                         {...(props as any)}
                     />
                 </div>
-
-                <p className={styles.result}>{data}</p>
             </div>
 
             <div id={styles.overlay} className={styles.animateflicker}><div></div></div>

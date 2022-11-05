@@ -15,14 +15,17 @@ html {
 }
 
 .scanner {
-    width: 75%;
-    padding-left: 12.5%;
-    padding-top: 70%;
-    // rotate: -90deg;
+    position: absolute;
+    width: 225%;
+    left: -30%;
+    rotate: -90deg;
 }
 
 .result {
-    color: red;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    color: white;
 }
 
 @keyframes flickerAnimation {
@@ -66,23 +69,23 @@ html {
 #overlay:before {
     bottom: -400px;
     left: 100px;
-    border-width: 2px 0 0 2px
+    border-width: 8px 0 0 8px
 }
 
 #overlay:after {
     bottom: -400px;
     left: 250px;
-    border-width: 2px 2px 0 0
+    border-width: 8px 8px 0 0
 }
 
 #overlay>:first-child:before {
     bottom: -550px;
     left: 250px;
-    border-width: 0 2px 2px 0
+    border-width: 0 8px 8px 0
 }
 
 #overlay>:first-child:after {
     bottom: -550px;
     left: 100px;
-    border-width: 0 0 2px 2px
+    border-width: 0 0 8px 8px
 }
