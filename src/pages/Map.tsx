@@ -3,7 +3,7 @@ import {
     Box,
     SkeletonText,
   } from '@chakra-ui/react'
-import {useJsApiLoader, GoogleMap, Marker} from "@react-google-maps/api";
+import {useJsApiLoader, GoogleMap, MarkerF} from "@react-google-maps/api";
 import Headbar from '../components/Headbar';
 
 const center = {lat: 46.770439, lng: 23.591423};
@@ -15,7 +15,7 @@ const theGuildHall = {lat: 46.76887309015825, lng: 23.586278998637408};
 function Map() {
 
     const { isLoaded } = useJsApiLoader({
-        googleMapsApiKey: "AIzaSyAyeIl49luu-6PIo-YN3aoqqoBLrNID1dE",
+        googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY ?? "",
     });
 
     if(!isLoaded) {
@@ -27,14 +27,16 @@ function Map() {
         <Headbar></Headbar>
         <Box position="absolute" left={0} top={0} h="100%" w="100%">
             {}
-            <GoogleMap center={center} zoom={14} mapContainerStyle={{width: "100%", height: "100%"}} options={{
+            <GoogleMap center={center} zoom={13} mapContainerStyle={{width: "100%", height: "100%"}} options={{
                 zoomControl: false,
                 fullscreenControl: false,
+                streetViewControl: false,
+                mapTypeControl: false,
             }}>
-            <Marker position={qPerior} />
-            <Marker position={bisericaPiarista} />
-            <Marker position={formCafe} />
-            <Marker position={theGuildHall} />
+            <MarkerF position={qPerior} />
+            <MarkerF position={bisericaPiarista} />
+            <MarkerF position={formCafe} />
+            <MarkerF position={theGuildHall} />
             </GoogleMap>
         </Box>
         </>
