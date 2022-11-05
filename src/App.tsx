@@ -8,7 +8,6 @@ import Headbar from './components/Headbar';
 function App() {
   return (
     <>
-    <Headbar />
       <section className={styles.stats}></section>
       <section className={styles.menu}></section>
       <Footer />

@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Map from './pages/Map'
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -11,9 +12,10 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
    <Router>
+
     <Routes>
       <Route path="/" element={<App />} />
-      
+      <Route path="/map" element={<Map />} />
     </Routes>
   </Router>
   </React.StrictMode>

@@ -1,15 +1,15 @@
 import '../styles/_headbar.scss';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import SettingsIcon from '@mui/icons-material/Settings';
+import LeaderboardIcon from '@mui/icons-material/Leaderboard';
+import QrCode2Icon from '@mui/icons-material/QrCode2';
+import HomeIcon from '@mui/icons-material/Home';
+import { Link } from 'react-router-dom';
  
-export default function Headbar(props: any) {
+export default function Headbar() {
     return (
         <div className="Headbar_Wrapper">
-            <div className="User_Wrapper">
-                <AccountCircleIcon className="Margin"/>
-                <p>Marius</p>
-            </div>
-            <SettingsIcon className="Settings"/>
+            <LeaderboardIcon sx={{fontSize: 40}} className="Icon_Style"/>
+            <QrCode2Icon sx={{fontSize: 40}} className="Icon_Style"/>
+            <Link to="/" className='Icon_Style'><HomeIcon sx={{fontSize: 40}}/></Link>
         </div>
     );
 }
