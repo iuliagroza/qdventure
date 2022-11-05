@@ -46,6 +46,33 @@ html {
     animation: flickerAnimation 2s infinite;
 }
 
+@keyframes moveAnimation {
+    0% {
+        top: 350px;
+    }
+
+    50% {
+        top: 534px;
+    }
+
+    100% {
+        top: 350px;
+    }
+}
+
+.animatemove {
+    animation: moveAnimation 1.5s infinite;
+}
+
+#scannerbar {
+    position: absolute;
+    width: 192px;
+    height: 8px;
+    top: 350px;
+    left: 108px;
+    background-color: white;
+}
+
 #overlay {
     position: absolute;
     top: 0;

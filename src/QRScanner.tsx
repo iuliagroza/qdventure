@@ -42,6 +42,7 @@ const QRScanner = (props: any) => {
             </div>
 
             <div id={styles.overlay} className={styles.animateflicker}><div></div></div>
+            <div id={styles.scannerbar} className={styles.animatemove}></div>
         </>
 
     );
