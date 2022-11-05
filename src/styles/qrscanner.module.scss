@@ -1,0 +1,88 @@
+@import "_variables.scss";
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+}
+
+.scanner {
+    width: 75%;
+    padding-left: 12.5%;
+    padding-top: 70%;
+    // rotate: -90deg;
+}
+
+.result {
+    color: red;
+}
+
+@keyframes flickerAnimation {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.25;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.animateflicker {
+    animation: flickerAnimation 2s infinite;
+}
+
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.5;
+}
+
+#overlay:before,
+#overlay:after,
+#overlay>:first-child:before,
+#overlay>:first-child:after {
+    position: absolute;
+    content: ' ';
+    width: 50px;
+    height: 50px;
+    border-color: red;
+    border-style: solid;
+}
+
+#overlay:before {
+    bottom: -400px;
+    left: 100px;
+    border-width: 2px 0 0 2px
+}
+
+#overlay:after {
+    bottom: -400px;
+    left: 250px;
+    border-width: 2px 2px 0 0
+}
+
+#overlay>:first-child:before {
+    bottom: -550px;
+    left: 250px;
+    border-width: 0 2px 2px 0
+}
+
+#overlay>:first-child:after {
+    bottom: -550px;
+    left: 100px;
+    border-width: 0 0 2px 2px
+}
