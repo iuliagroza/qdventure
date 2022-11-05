@@ -18,7 +18,7 @@ const QRScanner = (props: any) => {
 
     const handleScan = (scanData: any) => {
         if (scanData && scanData !== "") {
-            console.log("Scanned", scanData);
+            console.log("Scanned QR data:", scanData);
             setData(scanData);
         }
     };
@@ -30,7 +30,7 @@ const QRScanner = (props: any) => {
     return (
         <>
             <div className={styles.container}>
-                <p id="result" className={styles.result}>{data}</p>
+                <p className={styles.result}>{data}</p>
                 <div className={styles.scanner}>
                     <QrReader
                         constraints={{ facingMode: "environment" }}
@@ -41,8 +41,11 @@ const QRScanner = (props: any) => {
                 </div>
             </div>
 
+            <div id={styles.darken}></div>
             <div id={styles.overlay} className={styles.animateflicker}><div></div></div>
             <div id={styles.scannerbar} className={styles.animatemove}></div>
+
+            <p className={styles.hint}>Scan QR Code</p>
         </>
 
     );
