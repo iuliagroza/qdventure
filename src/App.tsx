@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
+
 import styles from "./styles/app.module.scss"
 import Footer from './components/footer';
 
@@ -10,6 +11,7 @@ function App() {
       <section className={styles.menu}></section>
       <Footer />
     </>
+
   );
 }
 
