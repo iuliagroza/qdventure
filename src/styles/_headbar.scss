@@ -1,0 +1,26 @@
+.Headbar_Wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 40px;
+    background-color: #EEE;
+    margin: 10px 20px;
+}
+
+.User_Wrapper {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.Margin {
+    margin: 0 5px 0 10px;
+}
+
+.Settings {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-right: 10px;
+}
+
