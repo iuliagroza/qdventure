@@ -7,9 +7,13 @@ import MenuFloater from '../components/menuBtn';
 import FloatText from '../components/floatText';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import { ClassNames } from "@emotion/react";
+import { useContext } from "react";
+import { ContextContext } from "../globalContext";
 
 function Leaderboard() {
     var classNames = require('classnames');
+    const context = useContext(ContextContext);
+
     return (
         <>
             <MenuFloater />
@@ -21,7 +25,7 @@ function Leaderboard() {
                     <div className={classNames(styles.menuItem)}>
                         <img className={styles.icon} src={pfp} alt="pfp" height={100} width={100} />
                         <h1>Mark <br /><span>222 Places Visited</span></h1>
-                        
+
                     </div>
                     <div className={styles.menuItem}>
                         <img src={pfp} alt="pfp" height={100} width={100} />
@@ -33,7 +37,7 @@ function Leaderboard() {
                     </div>
                     <div className={styles.menuItem}>
                         <img src={pfp} alt="pfp" height={100} width={100} />
-                        <h1>Marius <br /><span>22 Places Visited</span></h1>
+                        <h1>Marius <br /><span>{context.places} Places Visited</span></h1>
                     </div>
                     <div className={styles.menuItem}>
                         <img src={pfp} alt="pfp" height={100} width={100} />

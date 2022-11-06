@@ -3,13 +3,18 @@ const ContextContext = createContext();
 
 const ContextProvider = ({ children }) => {
     const [places, setPlaces] = React.useState(21);
-    const [xp, setXp] = React.useState(295);
+    const [xp, setXp] = React.useState(99);
     const [level, setLvl] = React.useState(2);
     const discover = () => {
         setPlaces(places + 1);
-        setXp((xp + 3) % 100);
-        if (xp == 0)
+
+        if (xp >= 97) {
+            // console.log("level up");
+            setXp(0);
             setLvl(level + 1);
+        } else {
+            setXp(xp + 3);
+        }
     };
     return (
         <ContextContext.Provider value={{ places, xp, discover, level }}>
