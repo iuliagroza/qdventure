@@ -9,7 +9,7 @@ import FloatText from './components/floatText';
 import LocalMallIcon from '@mui/icons-material/LocalMall';
 import GroupIcon from '@mui/icons-material/Group';
 import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
-import BackpackIcon from '@mui/icons-material/Backpack';
+import BackpackIcon from '@mui/icons-material/Redeem';
 import { Link } from "react-router-dom";
 import React, { useContext } from "react";
 import { ContextContext, ContextProvider, withContext } from "./globalContext";
@@ -52,7 +52,7 @@ function App(props: any) {
         </Link>
         <div className={styles.btn} onClick={() => { context.discover() }}>
           <BackpackIcon fontSize="large" className={styles.icon} />
-          <p>Inventory</p>
+          <p>My Coupons</p>
         </div>
       </section>
       <Footer />
