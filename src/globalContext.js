@@ -7,8 +7,9 @@ const ContextProvider = ({ children }) => {
     const [level, setLvl] = React.useState(2);
     const discover = () => {
         setPlaces(places + 1);
-        setXp((xp + 3)%100);
-        setLvl(Math.floor(xp/100));
+        setXp((xp + 3) % 100);
+        if (xp == 0)
+            setLvl(level + 1);
     };
     return (
         <ContextContext.Provider value={{ places, xp, discover, level }}>
@@ -19,8 +20,8 @@ const ContextProvider = ({ children }) => {
 
 const withContext = (Child) => (props) => (
     <ContextContext.Consumer>
-      {(context) => <Child {...props} {...context} />}
+        {(context) => <Child {...props} {...context} />}
     </ContextContext.Consumer>
-  );
+);
 
-export {ContextProvider, withContext, ContextContext};
+export { ContextProvider, withContext, ContextContext };

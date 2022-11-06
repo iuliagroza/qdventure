@@ -5,6 +5,7 @@ import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Map from './pages/Map'
+import QRScanner from './QRScanner'
 
 import Account from './pages/account';
 import Friends from './pages/friends';
@@ -21,18 +22,19 @@ const root = ReactDOM.createRoot(
 const places = React.createContext(20);
 
 root.render(
-    <ContextProvider>
-      <Router>
-        <Routes>
-          <Route path="/" element={<App />} />
-          <Route path="/account" element={<Account/>} />
-          <Route path="/friends" element={<Friends />} />
-          <Route path="/discoveries" element={<Discoveries />} />
-          <Route path="/leaderboard" element={<Leaderboard />} />
-          <Route path="/map" element={<Map />} />
-        </Routes>
-      </Router>
-    </ContextProvider>
+  <ContextProvider>
+    <Router>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/account" element={<Account />} />
+        <Route path="/friends" element={<Friends />} />
+        <Route path="/discoveries" element={<Discoveries />} />
+        <Route path="/leaderboard" element={<Leaderboard />} />
+        <Route path="/map" element={<Map />} />
+        <Route path="/qr" element={<QRScanner />} />
+      </Routes>
+    </Router>
+  </ContextProvider>
 );
 
 // If you want your app to work offline and load faster, you can change
