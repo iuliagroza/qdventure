@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { QrReader } from 'react-qr-reader';
+import { ContextContext } from 'globalContext.js'
 
 import styles from "./styles/qrscanner.module.scss"
 
 const QRScanner = (props: any) => {
     const [data, setData] = useState("");
+    const context = useContext(ContextContext);
 
     const handleResult = async (result: any, error: any) => {
         if (!!result) {
@@ -20,6 +22,7 @@ const QRScanner = (props: any) => {
         if (scanData && scanData !== "") {
             console.log("Scanned QR data:", scanData);
             setData(scanData);
+            context.discover();
         }
     };
 
