@@ -17,10 +17,11 @@ import { ContextContext, ContextProvider, withContext } from "./globalContext";
 
 function App(props: any) {
 
-const context = useContext(ContextContext);
-  
+  const context = useContext(ContextContext);
+
   return (
     <>
+
       <MenuFloater />
       <FloatText text={"Marius"} />
       {console.log(ContextProvider.toString)}
@@ -49,7 +50,7 @@ const context = useContext(ContextContext);
             <p>Discoveries</p>
           </div>
         </Link>
-        <div className={styles.btn} onClick={() => {context.discover()}}>
+        <div className={styles.btn} onClick={() => { context.discover() }}>
           <BackpackIcon fontSize="large" className={styles.icon} />
           <p>Inventory</p>
         </div>
@@ -59,5 +60,5 @@ const context = useContext(ContextContext);
 
   );
 }
-
 export default withContext(App);
+
