@@ -82,6 +82,7 @@ html {
     height: 2px;
     top: 350px;
     left: 108px;
+    opacity: 0.8;
     background-color: white;
 }
 
@@ -91,7 +92,7 @@ html {
     left: 108px;
     width: 191px;
     height: 191px;
-    box-shadow: 0px 0px 1px 5000px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 1px 5000px rgba(0, 0, 0, 0.2);
 }
 
 #overlay {
