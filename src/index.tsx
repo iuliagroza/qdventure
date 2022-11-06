@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -8,22 +8,29 @@ import Account from './pages/account';
 import Friends from './pages/friends';
 import Discoveries from './pages/discoveries';
 import Leaderboard from './pages/leaderboard';
+import { ContextProvider } from './globalContext';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
+
+const places = React.createContext(20);
+
 root.render(
   <React.StrictMode>
-   <Router>
-    <Routes>
-      <Route path="/" element={<App />} />
-      <Route path="/account" element={<Account />} />
-      <Route path="/friends" element={<Friends />} />
-      <Route path="/discoveries" element={<Discoveries />} />
-      <Route path="/leaderboard" element={<Leaderboard />} />
-      
-    </Routes>
-  </Router>
+    <ContextProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/account" element={<Account/>} />
+          <Route path="/friends" element={<Friends />} />
+          <Route path="/discoveries" element={<Discoveries />} />
+          <Route path="/leaderboard" element={<Leaderboard />} />
+
+        </Routes>
+      </Router>
+    </ContextProvider>
   </React.StrictMode>
 );
 
