@@ -1,12 +1,14 @@
 import React, { useState, useContext } from 'react';
 import { QrReader } from 'react-qr-reader';
 import { ContextContext } from './globalContext.js'
+import { useNavigate } from 'react-router-dom';
 
 import styles from "./styles/qrscanner.module.scss"
 
 const QRScanner = (props: any) => {
     const [data, setData] = useState("");
     const context = useContext(ContextContext);
+    const nav = useNavigate();
 
     const handleResult = async (result: any, error: any) => {
         if (!!result) {
@@ -23,6 +25,7 @@ const QRScanner = (props: any) => {
             console.log("Scanned QR data:", scanData);
             setData(scanData);
             context.discover();
+            return nav("/", { replace: false });
         }
     };
 
