@@ -52,7 +52,7 @@ function App(props: any) {
         </Link>
         <div className={styles.btn} onClick={() => { context.discover() }}>
           <BackpackIcon fontSize="large" className={styles.icon} />
-          <p>My Coupons</p>
+          <p>My Rewards</p>
         </div>
       </section>
       <Footer />
