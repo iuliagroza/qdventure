@@ -1,6 +1,6 @@
 import styles from "../styles/friends.module.scss"
 import Footer from '../components/footer';
-
+import pfp from "../pfp.jpg"
 
 import { CircularProgress } from '@mui/material';
 import MenuFloater from '../components/menuBtn';
@@ -15,36 +15,32 @@ function Friends() {
   return (
     <>
       <MenuFloater />
-      <FloatText text={""} back/>
+      <FloatText text={"Your Friends"} back/>
       <section className={styles.stats}>
-        <section className={styles.statsW}>
-          <p className={styles.sideText}>Marius</p>
-          <h1>2<br />Lvl.</h1>
-          <CircularProgress className={styles.xp} size={170} thickness={5} color={"warning"} value={90} variant={"determinate"} />
-        </section>
+        
 
         <section className={styles.menu}>
             <div className={styles.menuItem}>
-                <p>Personal Information</p>
+                <img src={pfp} alt="pfp" height={100} width={100} />
+                <h1>Mircea <br/><span>200 Places Visited</span></h1>
             </div>
             <div className={styles.menuItem}>
-                <p>Notifications</p>
+                <img src={pfp} alt="pfp" height={100} width={100} />
+                <h1>Mirela <br/><span>20 Places Visited</span></h1>
             </div>
             <div className={styles.menuItem}>
-                <p>Privacy</p>
+                <img src={pfp} alt="pfp" height={100} width={100} />
+                <h1>Matei <br/><span>2 Places Visited</span></h1>
             </div>
             <div className={styles.menuItem}>
-                <p>Get Help</p>
+                <img src={pfp} alt="pfp" height={100} width={100} />
+                <h1>Mihai <br/><span>220 Places Visited</span></h1>
             </div>
             <div className={styles.menuItem}>
-                <p>Give us Feedback</p>
+                <img src={pfp} alt="pfp" height={100} width={100} />
+                <h1>Mark <br/><span>222 Places Visited</span></h1>
             </div>
-            <div className={styles.menuItem}>
-                <p>Terms of Service</p>
-            </div>
-            <div className={styles.menuItem}>
-                <p>Privacy Policy</p>
-            </div>
+            
         </section>
       </section>
 

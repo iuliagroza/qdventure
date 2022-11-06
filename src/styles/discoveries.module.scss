@@ -44,9 +44,9 @@
     & .menuItem {
         position: relative;
         top: 0;
-        right: -5%;
-        height: 100px;
-        width: 100%;
+        right: -10%;
+        height: 150px;
+        width: 90%;
         margin-bottom: 16px;
         background: #fff;
         display: flex;
@@ -59,24 +59,35 @@
             margin-left: 20px;
             font-size: 1.7rem;
             text-align: left;
-
-            & span {
-                font-size: 1.25rem;
-            }
         }
 
         & img {
             box-sizing: border-box;
-            border: 5px solid #2EC4B6;
-            border-radius: 50px;
-        }
-
-        .icon {
-            position: relative;
-            border: 5px solid gold;
-            left: -20px;
+            filter: drop-shadow(4px 0px 4px rgba(0, 0, 0, 0.25));
+            border-radius: 50px 0px 0px 50px;
         }
     }
 
-
+    .left {
+        position: relative;
+        top: 0;
+        left: -10%;
+        height: 150px;
+        width: 90%;
+        margin-bottom: 16px;
+        background: #fff;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        border-radius: 0px 50px 50px 0px;
+    
+    
+        &>img {
+            box-sizing: border-box;
+            filter: drop-shadow(-4px 0px 4px rgba(0, 0, 0, 0.25));
+            border-radius: 0px 50px 50px 0px;
+        }
+    }
 }
+

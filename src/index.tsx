@@ -6,6 +6,8 @@ import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Account from './pages/account';
 import Friends from './pages/friends';
+import Discoveries from './pages/discoveries';
+import Leaderboard from './pages/leaderboard';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -17,6 +19,8 @@ root.render(
       <Route path="/" element={<App />} />
       <Route path="/account" element={<Account />} />
       <Route path="/friends" element={<Friends />} />
+      <Route path="/discoveries" element={<Discoveries />} />
+      <Route path="/leaderboard" element={<Leaderboard />} />
       
     </Routes>
   </Router>

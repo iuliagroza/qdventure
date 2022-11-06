@@ -14,7 +14,6 @@ import BackpackIcon from '@mui/icons-material/Backpack';
 function Account() {
   return (
     <>
-      <MenuFloater />
       <FloatText text={""} back/>
       <section className={styles.stats}>
         <section className={styles.statsW}>

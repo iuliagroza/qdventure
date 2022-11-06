@@ -35,10 +35,12 @@ function App() {
             <p>Friends</p>
           </div>
         </Link>
-        <div className={styles.btn}>
-          <FormatListBulletedIcon fontSize="large" className={styles.icon} />
-          <p>Discoveries</p>
-        </div>
+        <Link to={"/discoveries"}>
+          <div className={styles.btn}>
+            <FormatListBulletedIcon fontSize="large" className={styles.icon} />
+            <p>Discoveries</p>
+          </div>
+        </Link>
         <div className={styles.btn}>
           <BackpackIcon fontSize="large" className={styles.icon} />
           <p>Inventory</p>

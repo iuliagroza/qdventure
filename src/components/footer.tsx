@@ -11,7 +11,7 @@ export default function Footer(props: any) {
             <div className={styles.floater}>
                 <QrCodeScannerIcon fontSize="large" className={styles.icon} />
             </div>
-            <LeaderboardIcon fontSize="large" className={styles.icon} />
+            <Link to="/leaderboard"><LeaderboardIcon fontSize="large" className={styles.icon} /></Link>
             <MapIcon fontSize="large" className={styles.icon} />
         </div>
     );
